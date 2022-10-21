@@ -28,6 +28,7 @@ def niveau(param):
 
         else:
             param = input("Veuillez choisir un mode de jeu: débutant, intermédiaire ou expert: ")
+            
 
     return(nbVies)
 
@@ -99,7 +100,7 @@ for Vies in range (Vies, 0, -1):
         
         elif lettre in lettres_deja_proposees:
             print ("lettre déjà saissie")
-            Vies +=1
+            Vies = Vies
         if lettre not in ranWord:
             Vies -= 1
             
@@ -109,7 +110,7 @@ for Vies in range (Vies, 0, -1):
         if Vies == 0:
             print("Vous avez perdu")
             break
-
+    if Vies >= 1:
         print("Vous avez gagné")
     break
 
